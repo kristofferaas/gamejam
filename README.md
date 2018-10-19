@@ -1,6 +1,7 @@
-Repo for gamejam.
+# Repo for gamejam.
 
-Tema: "Studenttilværelsen" 😒
+## Tema: 
+ - "Studenttilværelsen" 😒
 
-Ideas:
+## Ideas:
  - 
