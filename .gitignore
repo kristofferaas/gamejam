@@ -23,6 +23,7 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.meta
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -34,3 +35,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Custom
+Assets/Plugins/
+Assets/Plugins.meta
