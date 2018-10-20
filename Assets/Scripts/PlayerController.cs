@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject distanceText;
     public Transform startPos;
 
-    bool hasLaunched = false;
+    public bool hasLaunched = false;
     bool isFinished = false;
     float distance = 0;
 	
@@ -80,15 +80,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {  
         
-        if (Input.GetAxis("Jump") == 1 && !hasLaunched)
+        /*if (Input.GetAxis("Jump") == 1 && !hasLaunched)
         {
             Launch(15f, 15f);
-        }
+        }*/
 
         if (Input.GetAxis("Jump") == 1 && energy > 0 && hasLaunched)
         {
             Boost();
-        }
+        }  
         
     }
 

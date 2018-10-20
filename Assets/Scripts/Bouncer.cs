@@ -46,7 +46,7 @@ public class Bouncer : MonoBehaviour
             
             _rectTransform.position = new Vector2( _anchor.x + posX, _anchor.y );
 
-            if (Input.GetButtonDown("Submit"))
+            if (Input.GetButtonDown("Jump"))
             {
 
                 thrown = true;
@@ -66,6 +66,8 @@ public class Bouncer : MonoBehaviour
         print(multiplier);
         
         throwPrefab.GetComponent<Rigidbody2D>().AddForce( vel * multiplier );
+
+        throwPrefab.GetComponent<PlayerController>().hasLaunched = true;
         
     }
 
