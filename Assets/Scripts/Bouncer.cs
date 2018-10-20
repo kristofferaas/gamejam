@@ -6,35 +6,67 @@ using UnityEngine;
 public class Bouncer : MonoBehaviour
 {
 
-    public float AlternateAmount = 1.0f;
-    public GameObject Indicator;
+    public GameObject throwPrefab;
+    
+    public float alternateAmount = 1.0f;
+    public GameObject indicator;
 
     private RectTransform _rectTransform;
     private Vector2 _anchor;
+
+    private bool thrown;
+
+    private Vector2 _throwVelocity;
+
+    private float indicatorWidth;
+
+    private float _maxForce = 128.0f;
     
     // Use this for initialization
     void Start()
     {
 
-        _rectTransform = Indicator.GetComponent<RectTransform>();
+        _rectTransform = indicator.GetComponent<RectTransform>();
 
+        thrown = false;
+
+        indicatorWidth = _rectTransform.rect.width;
         _anchor = _rectTransform.position;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        var sin = Mathf.Sin(Time.time * AlternateAmount) * 128.0f;
-        
-        _rectTransform.position = new Vector2( _anchor.x + sin, _anchor.y );
-
-        if (Input.GetButtonDown("Submit"))
+        if (!thrown)
         {
-            print( Mathf.Clamp( Mathf.Abs(sin), 0f, 100f ) );
+            
+            var posX = Mathf.Sin(Time.time * alternateAmount) * _maxForce;
+            
+            _rectTransform.position = new Vector2( _anchor.x + posX, _anchor.y );
+
+            if (Input.GetButtonDown("Submit"))
+            {
+
+                thrown = true;
+                ThrowGameObject( _maxForce - Mathf.Abs( posX ));
+
+            }
+            
         }
 
+    }
+
+    void ThrowGameObject( float multiplier )
+    {
+        
+        var vel = new Vector2( 100, 100 );
+
+        print(multiplier);
+        
+        throwPrefab.GetComponent<Rigidbody2D>().AddForce( vel * multiplier );
+        
     }
 
 }
