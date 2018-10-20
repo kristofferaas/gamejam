@@ -9,12 +9,20 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb2d;
     [SerializeField] private float thrust;
+	[SerializeField] private GameObject energyText;
     bool hasLaunched = false;
+	float energy = 100;
 
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+		updateEnergyText();
+    }
+
+	private void updateEnergyText()
+    {
+        energyText.GetComponent<Text>().text = "Energy: " + energy;
     }
 
     // Use this for initialization
@@ -34,15 +42,28 @@ public class PlayerController : MonoBehaviour
 
     }
 
+	private void boost()
+    {
+		energy--;
+		rb2d.AddForce(Vector2.up*thrust*0.35f, ForceMode2D.Impulse);
+		rb2d.AddForce(Vector2.right*thrust*0.15f, ForceMode2D.Impulse);
+        updateEnergyText();
+    }
+
     private void FixedUpdate()
     {  
-        if (Input.GetAxis("Jump") == 1)
+        if (Input.GetAxis("Jump") == 1 && energy > 0)
         {
-            rb2d.AddForce(Vector2.up*thrust*0.75f, ForceMode2D.Impulse);
-            rb2d.AddForce(Vector2.right*thrust, ForceMode2D.Impulse);
+            boost();
             hasLaunched = true;
         }
         
     }
 
 }
+
+/*
+
+
+
+ */
