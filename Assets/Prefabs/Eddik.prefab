@@ -21,10 +21,11 @@ GameObject:
   - component: {fileID: 4151272312208492}
   - component: {fileID: 212473540515599192}
   - component: {fileID: 61371753459292314}
-  - component: {fileID: 114573626647237474}
-  m_Layer: 0
+  - component: {fileID: 114551011593058928}
+  - component: {fileID: 114110031811954530}
+  m_Layer: 8
   m_Name: Eddik
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.05, y: 7.52}
   m_EdgeRadius: 0
---- !u!114 &114573626647237474
+--- !u!114 &114110031811954530
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,9 +76,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942962493736352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba1db771b79d6e541a6974b628a9a8a2, type: 3}
+  m_Script: {fileID: 11500000, guid: ce6858a732618704fa3e97c3cbcab867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114551011593058928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1942962493736352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6699fd903c39649b492e6e389a301f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
 --- !u!212 &212473540515599192
 SpriteRenderer:
   m_ObjectHideFlags: 1

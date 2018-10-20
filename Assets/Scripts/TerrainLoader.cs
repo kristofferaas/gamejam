@@ -12,7 +12,7 @@ public class TerrainLoader : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log(currentTerrain.transform.position);
+
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class TerrainLoader : MonoBehaviour
 			SwitchTerrain();
 		}
         float negate = 1 - gameObject.transform.position.y / 200;
-        sky.GetComponent<SpriteRenderer>().color = new Color(0, negate - 0.1f, negate);
+        sky.GetComponent<SpriteRenderer>().color = new Color(0, negate - 0.1f, negate, 1 - negate);
         sky.transform.position = gameObject.transform.position + new Vector3(0, 0, 100);
     }
 

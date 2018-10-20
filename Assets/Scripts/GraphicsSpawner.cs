@@ -6,7 +6,8 @@ public class GraphicsSpawner : MonoBehaviour {
 
     float spawnTimer = 0.0f;
     public ObjectPooling cloudPool;
-    public GameObject sattelite;
+    public ObjectPooling planePool;
+    public ObjectPooling sattelitePool;
 
     private Rigidbody2D rb;
 
@@ -31,12 +32,21 @@ public class GraphicsSpawner : MonoBehaviour {
                     spawn.transform.position = new Vector3(gameObject.transform.position.x + rb.velocity.x, gameObject.transform.position.y + randomY + rb.velocity.y, 50);
                     spawn.SetActive(true);
                 }
-            } else if (height < 300)
+            } else if (height < 300 && rb.velocity.magnitude > 20)
             {
                 if (roll > 95)
                 {
-                    GameObject spawn = Instantiate(sattelite);
-                    spawn.transform.position = new Vector3(gameObject.transform.position.x + 50, gameObject.transform.position.y + randomY, 50);
+                    GameObject spawn = planePool.GetPooledObject();
+                    spawn.transform.position = new Vector3(gameObject.transform.position.x + rb.velocity.x, gameObject.transform.position.y + randomY + rb.velocity.y, 50);
+                    spawn.SetActive(true);
+                }
+            } else if (rb.velocity.magnitude > 20)
+            {
+                if (roll > 95)
+                {
+                    GameObject spawn = sattelitePool.GetPooledObject();
+                    spawn.transform.position = new Vector3(gameObject.transform.position.x + rb.velocity.x, gameObject.transform.position.y + randomY + rb.velocity.y, 50);
+                    spawn.SetActive(true);
                 }
             }
             spawnTimer = 0.0f;
