@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
     Rigidbody2D rb2d;
-    [SerializeField] private float jumpForce;
+    [SerializeField] private float thrust;
     bool hasLaunched = false;
 
 
@@ -36,9 +36,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {  
-        if (Input.GetAxis("Jump") == 1 && !hasLaunched)
+        if (Input.GetAxis("Jump") == 1)
         {
-            rb2d.AddForce(Vector2.up * jumpForce,ForceMode2D.Impulse);
+            rb2d.AddForce(Vector2.up*thrust*0.75f, ForceMode2D.Impulse);
+            rb2d.AddForce(Vector2.right*thrust, ForceMode2D.Impulse);
             hasLaunched = true;
         }
         

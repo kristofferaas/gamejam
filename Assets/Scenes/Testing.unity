@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad695c8786813d469045d47463593ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  jumpForce: 10.2
 --- !u!70 &752530690
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
