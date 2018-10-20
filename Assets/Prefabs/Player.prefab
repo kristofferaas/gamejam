@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad695c8786813d469045d47463593ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1.05
+  thrust: 0.5
   energy: 300
   energyText: {fileID: 0}
   distanceText: {fileID: 0}

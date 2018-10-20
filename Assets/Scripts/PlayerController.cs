@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Transform startPos;
 
     bool hasLaunched = false;
+    bool isFinished = false;
     float distance = 0;
 	
 
@@ -59,16 +60,20 @@ public class PlayerController : MonoBehaviour
 	private void Boost()
     {
 		energy--;
-		rb2d.AddForce(Vector2.up*thrust*0.35f, ForceMode2D.Impulse);
-		rb2d.AddForce(Vector2.right*thrust*0.15f, ForceMode2D.Impulse);
+		rb2d.AddForce(new Vector2(thrust, thrust), ForceMode2D.Impulse);
         UpdateEnergyText();
     }
 
     private void Launch(float forceForward, float forceUpward)
     {
         hasLaunched = true;
-		rb2d.AddForce(Vector2.up*forceForward, ForceMode2D.Impulse);
-		rb2d.AddForce(Vector2.right*forceUpward, ForceMode2D.Impulse);
+		rb2d.AddForce(new Vector2(forceForward, forceUpward), ForceMode2D.Impulse);
+    }
+
+    private void Finished()
+    {
+        isFinished = true;
+		Debug.Log("Finished!");
     }
 
 
