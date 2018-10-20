@@ -8,7 +8,7 @@ public class ObjectDistanceScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
+        player = GameObject.Find("DummyPlayer");
 	}
 	
 	// Update is called once per frame
