@@ -7,7 +7,7 @@ public class TerrainLoader : MonoBehaviour
 	public GameObject currentTerrain;
 	public GameObject nextTerrain;
 
-    float blueCounter = 1.0f;
+    public GameObject sky;
 
 	// Use this for initialization
 	void Start ()
@@ -17,31 +17,20 @@ public class TerrainLoader : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameObject.transform.position.x > currentTerrain.transform.position.x)
+		if (gameObject.transform.position.x > currentTerrain.transform.position.x + 50)
 		{
-			SwitchTerrainX();
-		}
-		if (gameObject.transform.position.y > currentTerrain.transform.position.y)
-		{
-			SwitchTerrainY();
+			SwitchTerrain();
 		}
         float negate = 1 - gameObject.transform.position.y / 200;
-        currentTerrain.GetComponent<SpriteRenderer>().color = new Color(negate, negate, negate);
+        sky.GetComponent<SpriteRenderer>().color = new Color(0, negate - 0.1f, negate);
+        sky.transform.position = gameObject.transform.position + new Vector3(0, 0, 100);
     }
 
-	private void SwitchTerrainX()
+	private void SwitchTerrain()
 	{
 		GameObject save = currentTerrain;
 		currentTerrain = nextTerrain;
-		currentTerrain.transform.position = nextTerrain.transform.position + new Vector3(10.0f, 0.0f, 0.0f);
-		nextTerrain = save;
-	}
-	
-	private void SwitchTerrainY()
-	{
-		GameObject save = currentTerrain;
-		currentTerrain = nextTerrain;
-		currentTerrain.transform.position = nextTerrain.transform.position + new Vector3(0.0f, 3.0f, 0.0f);
+		currentTerrain.transform.position = nextTerrain.transform.position + new Vector3(200.0f, 0.0f, 0.0f);
 		nextTerrain = save;
 	}
 }

@@ -6,12 +6,7 @@ public class DummyPlayerMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		gameObject.transform.position = gameObject.transform.position + new Vector3(1.0f, 0.5f, 0.0f);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(new Vector2(2000, 2000));
 	}
 }
