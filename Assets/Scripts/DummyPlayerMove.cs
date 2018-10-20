@@ -12,6 +12,6 @@ public class DummyPlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		gameObject.transform.position = gameObject.transform.position + new Vector3(3.0f, 0.0f, 0.0f);
+		gameObject.transform.position = gameObject.transform.position + new Vector3(1.0f, 0.5f, 0.0f);
 	}
 }
