@@ -710,7 +710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eddikPool: {fileID: 2053793250}
+  pool: {fileID: 0}
+  spawnChance: 0
 --- !u!114 &841463535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +742,7 @@ MonoBehaviour:
   energyText: {fileID: 1772030373}
   distanceText: {fileID: 1708282329}
   startPos: {fileID: 1277719042}
+  hasLaunched: 0
 --- !u!1 &1013320074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,10 +1180,6 @@ Prefab:
     - target: {fileID: 1727368977708282, guid: 37472ddca8d69154ea56bebd72dbf76a, type: 2}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 1950292945183678, guid: 37472ddca8d69154ea56bebd72dbf76a, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37472ddca8d69154ea56bebd72dbf76a, type: 2}

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour {
 
-    public ObjectPooling eddikPool;
+    public ObjectPooling pool;
+    public float spawnChance = 0.0f;
     float spawnTimer = 0.0f;
 
     private Rigidbody2D rb;
@@ -24,10 +25,18 @@ public class ObjectSpawner : MonoBehaviour {
 
             float randomY = Random.Range(-15, 15);
 
-            if (roll > 0)
+            float positionY = gameObject.transform.position.y + randomY + rb.velocity.y;
+            float positionX = gameObject.transform.position.x + rb.velocity.x;
+
+            if (positionY < 1)
             {
-                GameObject spawn = eddikPool.GetPooledObject();
-                spawn.transform.position = new Vector3(gameObject.transform.position.x + rb.velocity.x, gameObject.transform.position.y + randomY + rb.velocity.y, 50);
+                positionY = 1f;
+            }
+
+            if (roll > 100 - spawnChance)
+            {
+                GameObject spawn = pool.GetPooledObject();
+                spawn.transform.position = new Vector3(positionX, positionY, 50);
                 spawn.SetActive(true);
             }
             spawnTimer = 0.0f;

@@ -11,7 +11,7 @@ public class ObjectCollision : MonoBehaviour
         //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
         if (other.gameObject.tag.Equals("PickUp"))
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity += new Vector2(other.gameObject.GetComponent<Collidable>().damage, 0.0f);
+            gameObject.GetComponent<Rigidbody2D>().velocity += new Vector2(-other.gameObject.GetComponent<Collidable>().damage, 0.0f);
             other.gameObject.SetActive(false);
         }
     }
