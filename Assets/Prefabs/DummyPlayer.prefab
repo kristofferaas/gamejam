@@ -38,13 +38,15 @@ GameObject:
   - component: {fileID: 212699951764491358}
   - component: {fileID: 50110104153253772}
   - component: {fileID: 70342231261515156}
-  - component: {fileID: 114457289808693264}
-  - component: {fileID: 114161104631929010}
-  - component: {fileID: 114862362983529212}
-  - component: {fileID: 114734330467138660}
-  - component: {fileID: 114424696824636330}
-  - component: {fileID: 114826102456410752}
-  - component: {fileID: 114997406769101324}
+  - component: {fileID: 114190677574700136}
+  - component: {fileID: 114442595774713674}
+  - component: {fileID: 114821033475360102}
+  - component: {fileID: 114506290082580850}
+  - component: {fileID: 114084579405272126}
+  - component: {fileID: 114335667133631652}
+  - component: {fileID: 114722489564587110}
+  - component: {fileID: 114236228399114358}
+  - component: {fileID: 114257578646088792}
   m_Layer: 0
   m_Name: DummyPlayer
   m_TagString: Player
@@ -102,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823460023710104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8230066, y: 2.4, z: -2}
+  m_LocalPosition: {x: 2.8230066, y: -1.8152037, z: -2}
   m_LocalScale: {x: 0.378, y: 0.378, z: 0.378}
   m_Children:
   - {fileID: 4214593901253096}
@@ -162,7 +164,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.05
+  m_LinearDrag: 0.25
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -217,7 +219,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1941379826891560}
   m_Enabled: 1
---- !u!114 &114161104631929010
+--- !u!114 &114084579405272126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,19 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 0}
-  spawnChance: -40
---- !u!114 &114424696824636330
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1823460023710104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc3fb3391b431624aa43859dbc7d28c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114457289808693264
+  spawnChance: 20
+--- !u!114 &114190677574700136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +246,46 @@ MonoBehaviour:
   currentTerrain: {fileID: 0}
   nextTerrain: {fileID: 0}
   sky: {fileID: 0}
---- !u!114 &114734330467138660
+--- !u!114 &114236228399114358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a6909a2ba0dba439d699a28a079c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114257578646088792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad695c8786813d469045d47463593ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 1
+  energy: 300
+  energyText: {fileID: 0}
+  distanceText: {fileID: 0}
+  startPos: {fileID: 0}
+  hasLaunched: 0
+--- !u!114 &114335667133631652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3fb3391b431624aa43859dbc7d28c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114442595774713674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,8 +297,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 0}
-  spawnChance: 50
---- !u!114 &114826102456410752
+  spawnChance: 30
+--- !u!114 &114506290082580850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 0}
+  spawnChance: 10
+--- !u!114 &114722489564587110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +325,7 @@ MonoBehaviour:
   cloudPool: {fileID: 0}
   planePool: {fileID: 0}
   sattelitePool: {fileID: 0}
---- !u!114 &114862362983529212
+--- !u!114 &114821033475360102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,18 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 0}
-  spawnChance: 30
---- !u!114 &114997406769101324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1823460023710104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a6909a2ba0dba439d699a28a079c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  spawnChance: 20
 --- !u!212 &212699951764491358
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -341,8 +373,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 973e3f2397249744ab96c200a057b889, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.85642624, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 53fc561d59339774388da77d9714c3b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
