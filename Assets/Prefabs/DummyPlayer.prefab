@@ -38,7 +38,13 @@ GameObject:
   - component: {fileID: 212699951764491358}
   - component: {fileID: 50110104153253772}
   - component: {fileID: 70342231261515156}
-  - component: {fileID: 114723700226878112}
+  - component: {fileID: 114457289808693264}
+  - component: {fileID: 114161104631929010}
+  - component: {fileID: 114862362983529212}
+  - component: {fileID: 114734330467138660}
+  - component: {fileID: 114424696824636330}
+  - component: {fileID: 114826102456410752}
+  - component: {fileID: 114997406769101324}
   m_Layer: 0
   m_Name: DummyPlayer
   m_TagString: Player
@@ -96,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823460023710104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8230066, y: -1.8152037, z: -2}
+  m_LocalPosition: {x: 2.8230066, y: 2.4, z: -2}
   m_LocalScale: {x: 0.378, y: 0.378, z: 0.378}
   m_Children:
   - {fileID: 4214593901253096}
@@ -156,7 +162,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.5
+  m_LinearDrag: 0.05
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -211,7 +217,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1941379826891560}
   m_Enabled: 1
---- !u!114 &114723700226878112
+--- !u!114 &114161104631929010
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,11 +225,87 @@ MonoBehaviour:
   m_GameObject: {fileID: 1823460023710104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bad695c8786813d469045d47463593ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1.25
-  energyText: {fileID: 0}
+  pool: {fileID: 0}
+  spawnChance: -40
+--- !u!114 &114424696824636330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3fb3391b431624aa43859dbc7d28c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114457289808693264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854da0d353e80d24ba5b7000d2d8eb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTerrain: {fileID: 0}
+  nextTerrain: {fileID: 0}
+  sky: {fileID: 0}
+--- !u!114 &114734330467138660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 0}
+  spawnChance: 50
+--- !u!114 &114826102456410752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42f721cefb213947a1021e83ae0a116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudPool: {fileID: 0}
+  planePool: {fileID: 0}
+  sattelitePool: {fileID: 0}
+--- !u!114 &114862362983529212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 0}
+  spawnChance: 30
+--- !u!114 &114997406769101324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823460023710104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a6909a2ba0dba439d699a28a079c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212699951764491358
 SpriteRenderer:
   m_ObjectHideFlags: 1
