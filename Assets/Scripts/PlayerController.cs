@@ -45,8 +45,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
+        if (collision.gameObject.tag=="Energy")
+        {
+            energy += 20f;
+        }
     }
+
 
     // Update is called once per frame
     void Update()

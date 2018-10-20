@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4938197611662980}
   - component: {fileID: 212579986571846720}
   - component: {fileID: 114422717715963624}
+  - component: {fileID: 114851305914951994}
   - component: {fileID: 61996046625701746}
   m_Layer: 0
   m_Name: F
@@ -79,6 +80,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
+--- !u!114 &114851305914951994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102983552201712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6858a732618704fa3e97c3cbcab867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212579986571846720
 SpriteRenderer:
   m_ObjectHideFlags: 1
