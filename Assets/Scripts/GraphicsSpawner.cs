@@ -27,9 +27,9 @@ public class GraphicsSpawner : MonoBehaviour {
             float positionY = gameObject.transform.position.y + randomY + rb.velocity.y;
             float positionX = gameObject.transform.position.x + rb.velocity.x;
 
-            if (positionY < 0.5f)
+            if (positionY < 3f)
             {
-                positionY = 0.5f;
+                positionY = 3f;
             }
 
             GameObject spawn;

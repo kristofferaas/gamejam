@@ -9,6 +9,7 @@ public class TerrainLoader : MonoBehaviour
 
     public GameObject sky;
 
+
 	// Use this for initialization
 	void Start ()
 	{

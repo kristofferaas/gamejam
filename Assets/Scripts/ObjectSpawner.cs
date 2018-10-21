@@ -25,8 +25,8 @@ public class ObjectSpawner : MonoBehaviour {
 
             float randomY = Random.Range(-15, 15);
 
-            float positionY = gameObject.transform.position.y + randomY + rb.velocity.y;
-            float positionX = gameObject.transform.position.x + rb.velocity.x;
+            float positionY = gameObject.transform.position.y + randomY + (rb.velocity.y * 2);
+            float positionX = gameObject.transform.position.x + (rb.velocity.x * 2);
 
             if (positionY < 1)
             {
