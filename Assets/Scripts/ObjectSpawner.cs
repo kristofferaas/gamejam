@@ -18,19 +18,20 @@ public class ObjectSpawner : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (spawnTimer > 0.3f && rb.velocity.magnitude > 10)
+        if (spawnTimer > 0.2f && rb.velocity.magnitude > 10)
         {
             float roll = Random.Range(0, 100);
             float height = gameObject.transform.position.y;
 
-            float randomY = Random.Range(-15, 15);
+            float randomY = Random.Range(-40, 40);
+            float randomX = Random.Range(-10, 50);
 
             float positionY = gameObject.transform.position.y + randomY + (rb.velocity.y * 2);
-            float positionX = gameObject.transform.position.x + (rb.velocity.x * 2);
+            float positionX = gameObject.transform.position.x + randomX + (rb.velocity.x * 2);
 
             if (positionY < 1)
             {
-                positionY = 1f;
+                positionY = 0.5f;
             }
 
             if (roll > 100 - spawnChance)

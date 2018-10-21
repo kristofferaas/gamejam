@@ -22,10 +22,11 @@ public class GraphicsSpawner : MonoBehaviour {
             float roll = Random.Range(0, 100);
             float height = gameObject.transform.position.y;
 
-            float randomY = Random.Range(-15, 15);
+            float randomY = Random.Range(-30, 30);
+            float randomX = Random.Range(0, 50);
 
-            float positionY = gameObject.transform.position.y + randomY + rb.velocity.y;
-            float positionX = gameObject.transform.position.x + rb.velocity.x;
+            float positionY = gameObject.transform.position.y + randomY + (rb.velocity.y * 2);
+            float positionX = gameObject.transform.position.x + (rb.velocity.x * 2) + randomX;
 
             if (positionY < 3f)
             {
@@ -34,7 +35,7 @@ public class GraphicsSpawner : MonoBehaviour {
 
             GameObject spawn;
 
-            if (height < 100 && rb.velocity.x > 10)
+            if (height < 500 && rb.velocity.x > 10)
             {
                 if (roll > 20)
                 {
@@ -42,7 +43,9 @@ public class GraphicsSpawner : MonoBehaviour {
                     spawn.transform.position = new Vector3(positionX, positionY, 50);
                     spawn.SetActive(true);
                 }
-            } else if (height < 300 && rb.velocity.magnitude > 20)
+            }
+
+            if (height > 200 && rb.velocity.magnitude > 20)
             {
                 if (roll > 95)
                 {

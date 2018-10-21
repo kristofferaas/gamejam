@@ -11,7 +11,7 @@ public class Bouncer : MonoBehaviour
     public float alternateAmount = 1.0f;
     public GameObject indicator;
 
-    public float force = 100;
+    public float force = 1000;
 
     private RectTransform _rectTransform;
     private Vector2 _anchor;

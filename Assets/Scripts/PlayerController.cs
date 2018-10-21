@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     private bool _hasLaunched = false;
     private bool _isFinished = false;
     private float _distance = 0;
+
+    private float endTimer = 0.0f;
+
+    public GameObject boostEffect;
 	
 
     private void Awake()
@@ -64,10 +68,12 @@ public class PlayerController : MonoBehaviour
 
         if (rb2d.velocity == Vector2.zero)
         {
-            
-            print( (int)_distance + "m");
-            Finished();
-            
+            endTimer += Time.deltaTime;
+            if (endTimer > 1)
+            {
+                print((int)_distance + "m");
+                Finished();
+            }
         }
         
     }
@@ -86,6 +92,7 @@ public class PlayerController : MonoBehaviour
 
     private void Finished()
     {
+        SceneManager.LoadScene(1);
         _isFinished = true;
 		Debug.Log("Finished!");
     }
@@ -98,8 +105,12 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetAxis("Jump") == 1 && energy > 0 && _hasLaunched)
         {
+            boostEffect.SetActive(true);
             Boost();
-        }  
+        } else
+        {
+            boostEffect.SetActive(false);
+        }
         
     }
 

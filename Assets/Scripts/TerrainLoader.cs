@@ -23,7 +23,7 @@ public class TerrainLoader : MonoBehaviour
 			SwitchTerrain();
 		}
         float negate = 1 - gameObject.transform.position.y / 200;
-        float negateAlpha = 1 - gameObject.transform.position.y / 500;
+        float negateAlpha = 1 - gameObject.transform.position.y / 1000;
         sky.GetComponent<SpriteRenderer>().color = new Color(0, negate - 0.1f, negate, 1 - negateAlpha);
         sky.transform.position = gameObject.transform.position + new Vector3(0, 0, 100);
     }
