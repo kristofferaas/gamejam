@@ -313,11 +313,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d98753e6cb7aa546aab02800bee9d6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   throwPrefab: {fileID: 841463526}
-  alternateAmount: 1
+  alternateAmount: 2
   indicator: {fileID: 1548134958}
+  force: 10
 --- !u!1 &667359088
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,8 +541,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 774103766}
   pooledObject: {fileID: 1030342838838252, guid: e86f04b7f2124074ba2ce0fa503ea65e,
     type: 2}
@@ -657,8 +658,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bad695c8786813d469045d47463593ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   thrust: 1
   energy: 300
   energyText: {fileID: 1772030373}
@@ -675,8 +676,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28a6909a2ba0dba439d699a28a079c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &841463530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,8 +688,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e42f721cefb213947a1021e83ae0a116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cloudPool: {fileID: 1574992256}
   planePool: {fileID: 1974056314}
   sattelitePool: {fileID: 1013320075}
@@ -702,8 +703,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fb3391b431624aa43859dbc7d28c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &841463532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,8 +715,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   pool: {fileID: 774103767}
   spawnChance: 20
 --- !u!114 &841463533
@@ -728,8 +729,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   pool: {fileID: 1649416729}
   spawnChance: 10
 --- !u!114 &841463534
@@ -742,8 +743,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   pool: {fileID: 2053793250}
   spawnChance: 20
 --- !u!114 &841463535
@@ -756,8 +757,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63aae4964216a6942a2491f7e83b1bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   pool: {fileID: 1474716275}
   spawnChance: 30
 --- !u!114 &841463536
@@ -770,8 +771,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 854da0d353e80d24ba5b7000d2d8eb1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   currentTerrain: {fileID: 737482227}
   nextTerrain: {fileID: 1510658310}
   sky: {fileID: 1580797002}
@@ -868,8 +869,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c9ca22b38a86df45b4a5179274dbfb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   currentOverlay: {fileID: 0}
   nextOverlay: {fileID: 0}
   overlayHeightStart: 400
@@ -899,8 +900,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 1013320074}
   pooledObject: {fileID: 1961279433968374, guid: a1f7f728007c56b4a960298f947e6987,
     type: 2}
@@ -973,8 +974,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 1474716274}
   pooledObject: {fileID: 1102983552201712, guid: 1a2b4b689c0ad9d4882cb92b49fd116d,
     type: 2}
@@ -1136,7 +1137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1574992255
 Transform:
   m_ObjectHideFlags: 0
@@ -1159,8 +1160,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 1574992254}
   pooledObject: {fileID: 1507090712154060, guid: ef4b0dcc0cd7ae04aafc70ffd4620a31,
     type: 2}
@@ -1267,8 +1268,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 1649416728}
   pooledObject: {fileID: 1871142867466362, guid: adca47fc74c63d14ba9483a7d48f7e45,
     type: 2}
@@ -1530,7 +1531,7 @@ Prefab:
     - target: {fileID: 223662258036067296, guid: 37472ddca8d69154ea56bebd72dbf76a,
         type: 2}
       propertyPath: m_Camera
-      value: 
+      value:
       objectReference: {fileID: 789727518}
     - target: {fileID: 1727368977708282, guid: 37472ddca8d69154ea56bebd72dbf76a, type: 2}
       propertyPath: m_Name
@@ -1618,8 +1619,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 1974056313}
   pooledObject: {fileID: 1628020136244016, guid: 4a48eb3e474258d408bb58f5a5668757,
     type: 2}
@@ -1664,8 +1665,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e39e73e04b45314eaf99990749e5951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   poolParent: {fileID: 2053793249}
   pooledObject: {fileID: 1942962493736352, guid: 9279041c0c115414d94f30ca639007f5,
     type: 2}

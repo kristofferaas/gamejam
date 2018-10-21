@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\krist\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\krist\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_GameJam.-732966647.00" t="ExcludeRecursive" />
+    <e p="C:\Users\krist\Projects\Unity\GameJam" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="FarlandSkies" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Player" t="Include">
+                <e p="FPSWalkerEnhanced.cs" t="Include" />
+                <e p="SmoothMouseLook.cs" t="Include" />
+              </e>
+              <e p="Skybox" t="Include">
+                <e p="SkyboxChanger.cs" t="Include" />
+                <e p="SkyboxRotator.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="GitHub" t="Include">
+            <e p="Editor" t="Include">
+              <e p="credits.txt" t="Include" />
+              <e p="eula.txt" t="Include" />
+              <e p="ExtensionLoader.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Bouncer.cs" t="Include" />
+          <e p="Collidable.cs" t="Include" />
+          <e p="DummyPlayerMove.cs" t="Include" />
+          <e p="GraphicsSpawner.cs" t="Include" />
+          <e p="ObjectCollision.cs" t="Include" />
+          <e p="ObjectDistanceScript.cs" t="Include" />
+          <e p="ObjectPooling.cs" t="Include" />
+          <e p="ObjectSpawner.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="TerrainLoader.cs" t="Include" />
+          <e p="test.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GameJam.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

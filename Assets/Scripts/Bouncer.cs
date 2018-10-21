@@ -11,6 +11,8 @@ public class Bouncer : MonoBehaviour
     public float alternateAmount = 1.0f;
     public GameObject indicator;
 
+    public float force = 100;
+
     private RectTransform _rectTransform;
     private Vector2 _anchor;
 
@@ -33,12 +35,13 @@ public class Bouncer : MonoBehaviour
         indicatorWidth = _rectTransform.rect.width;
         _anchor = _rectTransform.position;
 
+        indicator.transform.parent.gameObject.SetActive( true );
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (!thrown)
         {
             
@@ -50,25 +53,27 @@ public class Bouncer : MonoBehaviour
             {
 
                 thrown = true;
-                ThrowGameObject( _maxForce - Mathf.Abs( posX ));
+                StartCoroutine( ThrowGameObject( _maxForce - Mathf.Abs( posX )) );
+
 
             }
             
         }
-
     }
 
-    void ThrowGameObject( float multiplier )
+    IEnumerator ThrowGameObject( float multiplier )
     {
         
-        var vel = new Vector2( 100, 100 );
-
-        print(multiplier);
+        var vel = new Vector2( force, force );
         
         throwPrefab.GetComponent<Rigidbody2D>().AddForce( vel * multiplier );
 
-        throwPrefab.GetComponent<PlayerController>().hasLaunched = true;
+        throwPrefab.GetComponent<PlayerController>().Launch();
+
+        yield return new WaitForSecondsRealtime(1);
         
+        indicator.transform.parent.gameObject.SetActive( false );
+
     }
 
 }

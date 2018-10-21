@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 212444452282955928}
   - component: {fileID: 114369816529498450}
   m_Layer: 0
+<<<<<<< HEAD:Assets/Prefabs/test.prefab
+  m_Name: test
+=======
   m_Name: cloud1
+>>>>>>> e241d91fa556d8906cd6c548fd454bf890cc65cb:Assets/Prefabs/cloud1.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
