@@ -201,8 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwPrefab: {fileID: 841463526}
-  alternateAmount: 1
+  alternateAmount: 2
   indicator: {fileID: 1548134958}
+  force: 10
 --- !u!1 &667359088
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +607,16 @@ Prefab:
       propertyPath: pool
       value: 
       objectReference: {fileID: 2053793250}
+    - target: {fileID: 114722489564587110, guid: 534534a937712564f8d9cd1f2744d86c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442595774713674, guid: 534534a937712564f8d9cd1f2744d86c,
+        type: 2}
+      propertyPath: spawnChance
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534534a937712564f8d9cd1f2744d86c, type: 2}
   m_IsPrefabAsset: 0
@@ -825,7 +836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1574992255
 Transform:
   m_ObjectHideFlags: 0

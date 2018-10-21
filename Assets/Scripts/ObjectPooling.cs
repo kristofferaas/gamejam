@@ -20,9 +20,9 @@ public class ObjectPooling : MonoBehaviour
     private void Start()
     {
         pooledObjects = new List<GameObject>();
-        for (int i = 0; i < pooledAmount; i++)
+        for (var i = 0; i < pooledAmount; i++)
         {
-            GameObject obj = (GameObject)Instantiate(pooledObject);
+            var obj = Instantiate(pooledObject);
             obj.SetActive(false);
             pooledObjects.Add(obj);
             obj.transform.SetParent(poolParent.transform);
@@ -31,24 +31,23 @@ public class ObjectPooling : MonoBehaviour
 
     public GameObject GetPooledObject()
     {
-        for (int i = 0; i < pooledObjects.Count; i++)
+        foreach (var obj in pooledObjects)
         {
-            if (!pooledObjects[i].activeInHierarchy)
+            if (!obj.activeInHierarchy)
             {
-                return pooledObjects[i];
+                return obj;
             }
         }
 
         // if no objects are found, it can expand. But only if willGrow is set to true
-        if (willGrow)
+        if (!willGrow) return null;
         {
-            GameObject obj = (GameObject)Instantiate(pooledObject);
+            var obj = (GameObject)Instantiate(pooledObject);
             obj.transform.SetParent(poolParent.transform);
             obj.SetActive(false);
             pooledObjects.Add(obj);
             return obj;
         }
 
-        return null;
     }
 }
